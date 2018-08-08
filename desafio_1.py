@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 
 #matrix = imageio.imread('C:\\Users\\glind\\Pictures\\Figura_Desafio_1.png', as_gray=True)
 matrix = imageio.imread('C:\\Users\\glind\\Pictures\\bitcoin.jpg', as_gray=True)
-
 soma = 0
-
 cell_numbers = matrix.shape[1] * matrix.shape[0]
 
 for x in range(matrix.shape[0]):
@@ -15,7 +13,6 @@ for x in range(matrix.shape[0]):
         soma += matrix[x][y]
        
 media = soma / cell_numbers
-
 soma = 0
 
 for x in range(matrix.shape[0]):
@@ -23,7 +20,6 @@ for x in range(matrix.shape[0]):
         soma += (matrix[x][y] - media) * (matrix[x][y] - media)
 
 variancia = soma / cell_numbers
-
 matrix_as_array = matrix.flatten()
 histograma = [0] * 256
 
